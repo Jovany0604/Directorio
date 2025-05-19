@@ -14,3 +14,15 @@ const consumirApi = ()=> {
 };
 
 consumirApi();
+
+//Paso 1 : Funcion Flecha 
+const fetchAlbums = ()=> {
+    fetch("https://jsonplaceholder.typicode.com/albums")
+    //convertimos la respuesta a tipo JSON
+    .then((response) => response.json())
+    //Los datos los vamos a mandar a la consola 
+    .then((data) => console.log(data))
+    //descubrir que hacer en caso de que no me corresponda 
+    .catch((error) => console.log(error));
+
+};
